@@ -1,15 +1,15 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.bot();
 
 const prefix = '!';
 
 var version = '69.240';
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+bot.on('ready', () => {
+  console.log(`Logged in as ${bot.user.tag}!`);
 });
 
-client.on('message', message =>{
+bot.on('message', message =>{
   
     let args = message.content.slice(prefix.length).split(" ");
 
@@ -39,4 +39,4 @@ client.on('message', message =>{
 }
 });
 
-client.login(process.env.token);
+bot.login(process.env.token);
